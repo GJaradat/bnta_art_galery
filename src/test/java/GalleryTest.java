@@ -10,11 +10,13 @@ public class GalleryTest {
     Gallery gallery;
     Artist artist;
     Artwork artwork;
+    Artwork artwork2;
 
     @BeforeEach
     public void setUp(){
         artist = new Artist("Pablo");
         artwork = new Artwork("Penguin Of Peace", artist, 1_000_000);
+        artwork2 = new Artwork("Child With Penguin", artist, 750_000);
         gallery = new Gallery("The Rookery");
     }
 
@@ -64,4 +66,13 @@ public class GalleryTest {
         gallery.addToTill(100);
         assertThat(gallery.getTill()).isEqualTo(100);
     }
+
+    @Test
+    public void canTakeStock(){
+        gallery.addArtwork(artwork);
+        gallery.addArtwork(artwork2);
+        assertThat(gallery.getStock().size()).isEqualTo(2);
+        assertThat(gallery.stockTake()).isEqualTo(1_750_000);
+    }
+
 }

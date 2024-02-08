@@ -24,8 +24,7 @@ public class Gallery {
     }
 
     public double getTill() {
-
-        return till;
+        return this.till;
     }
 
     public void setTill(double till) {
@@ -33,7 +32,7 @@ public class Gallery {
     }
 
     public ArrayList<Artwork> getStock() {
-        return stock;
+        return this.stock;
     }
 
     public void addArtwork(Artwork artwork){
@@ -47,5 +46,13 @@ public class Gallery {
     //METHODS
     public void addToTill(double fish){
         this.till += fish;
+    }
+
+    public double stockTake(){
+        double totalFish = 0;
+        for(Artwork art : this.stock){
+            totalFish += art.getPrice();
+        }
+        return totalFish;
     }
 }
