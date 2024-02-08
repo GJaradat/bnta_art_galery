@@ -19,41 +19,41 @@ public class GalleryTest {
     }
 
     @Test
-    public void getName(){
+    public void canGetName(){
         assertThat(gallery.getName()).isEqualTo("The Rookery");
     }
 
     @Test
-    public void setName(){
+    public void canSetName(){
         gallery.setName("Peanut Gallery");
         assertThat(gallery.getName()).isEqualTo("Peanut Gallery");
     }
 
     @Test
-    public void getTill(){
+    public void canGetTill(){
         assertThat(gallery.getTill()).isEqualTo(0);
     }
 
     @Test
-    public void setTill(){
+    public void canSetTill(){
         gallery.setTill(1_000);
         assertThat(gallery.getTill()).isEqualTo(1_000);
     }
 
     @Test
-    public void getStock(){
+    public void canGetStock(){
         ArrayList<Artwork> expected = new ArrayList<>();
         assertThat(gallery.getStock()).isEqualTo(expected);
     }
 
     @Test
-    public void addArtwork(){
+    public void canAddArtwork(){
         gallery.addArtwork(artwork);
         assertThat(gallery.getStock().size()).isEqualTo(1);
     }
 
     @Test
-    public void removeArtwork(){
+    public void canRemoveArtwork(){
         gallery.addArtwork(artwork);
         gallery.removeArtwork(artwork);
         assertThat(gallery.getStock().size()).isEqualTo(0);

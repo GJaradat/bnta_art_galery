@@ -17,34 +17,34 @@ public class ArtworkTest {
     }
 
     @Test
-    public void getTitle(){
+    public void canGetTitle(){
         assertThat(artwork.getTitle()).isEqualTo("Penguin Of Peace");
     }
 
     @Test
-    public void setTitle(){
+    public void canSetTitle(){
         artwork.setTitle("Child With Penguin");
         assertThat(artwork.getTitle()).isEqualTo("Child With Penguin");
     }
 
     @Test
-    public void getArtist(){
+    public void canGetArtist(){
         assertThat(artwork.getArtist()).isEqualTo("Pablo");
     }
 
     @Test
-    public void setArtist(){
+    public void canSetArtist(){
         artwork.setArtist(artist2);
         assertThat(artwork.getArtist()).isEqualTo("Pingu");
     }
 
     @Test
-    public void getPrice(){
+    public void canGetPrice(){
         assertThat(artwork.getPrice()).isEqualTo(1_000_000);
     }
 
     @Test
-    public void setPrice(){
+    public void canSetPrice(){
         artwork.setPrice(500_000);
         assertThat(artwork.getPrice()).isEqualTo(500_000);
     }
