@@ -47,5 +47,9 @@ public class CustomerTest {
         customer.purchase(gallery,artwork);
         assertThat(customer.getWallet()).isEqualTo(0);
         assertThat(gallery.getTill()).isEqualTo(1_000_000);
+        assertThat(customer.getArtCollection().contains(artwork)).isEqualTo(true);
+        assertThat(gallery.getStock().contains(artwork)).isEqualTo(false);
     }
+
+
 }
