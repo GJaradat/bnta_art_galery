@@ -27,4 +27,12 @@ public class Customer {
         this.wallet = wallet;
     }
 
+
+    //METHODS
+    public void purchase(Gallery gallery, Artwork artwork){
+        if ((this.wallet >= artwork.getPrice()) && (gallery.getStock().contains(artwork))){
+            gallery.addToTill(artwork.getPrice());
+            this.wallet -= artwork.getPrice();
+        }
+    }
 }

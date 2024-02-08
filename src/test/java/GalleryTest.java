@@ -59,4 +59,9 @@ public class GalleryTest {
         assertThat(gallery.getStock().size()).isEqualTo(0);
     }
 
+    @Test
+    public void canAddToTill(){
+        gallery.addToTill(100);
+        assertThat(gallery.getTill()).isEqualTo(100);
+    }
 }

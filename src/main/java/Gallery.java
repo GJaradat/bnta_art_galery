@@ -19,10 +19,12 @@ public class Gallery {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public double getTill() {
+
         return till;
     }
 
@@ -40,5 +42,10 @@ public class Gallery {
 
     public void removeArtwork(Artwork artwork){
         this.stock.remove(artwork);
+    }
+
+    //METHODS
+    public void addToTill(double fish){
+        this.till += fish;
     }
 }
